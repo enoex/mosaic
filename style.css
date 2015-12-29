@@ -1,0 +1,52 @@
+html, body {
+    bottom: 0;
+    left: 0;
+    font-family: helvetica;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.clear { clear: both; }
+
+
+#palette-wrapper {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: auto;
+    top: 0;
+    width: 225px;
+}
+#palette {
+    position: relative;
+}
+.palette-item {
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    height: 70px;
+    float: left;
+    width: 70px;
+}
+.palette-item:hover {
+    border: 2px dashed #343434;
+}
+
+#mosaic {
+    bottom: 0;
+    left: 300px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.mosaic__grid-row {
+    clear: both;
+    position: relative;
+    overflow: auto;
+}
+.mosaic__grid-cell {
+    border: 1px solid #cdcdcd;
+    float: left;
+    height: 80px;
+    width: 80px;
+}
