@@ -40,15 +40,14 @@
         }
     }
 
-    function clearState () {
+    function clearMosaicState () {
         window.location.hash = '';
         if (MOSAIC_GRID_STATE) {
-            MOSAIC_GRID_STATE.forEach(function (y) {
-                if (!MOSAIC_GRID_STATE[y]){ return; }
-                MOSAIC_GRID_STATE[y].forEach(function (x) {
-                    MOSAIC_GRID_STATE[y][x] = null;
-                });
-            });
+            for (var y = 0; y < MOSAIC_GRID_STATE.length; y++) {
+                for (var x = 0; x < MOSAIC_GRID_STATE[y].length; x++) {
+                    MOSAIC_GRID_STATE[x][y] = null;
+                }
+            }
         }
 
         $('.mosaic__grid-cell').css({
@@ -205,6 +204,16 @@
 
         $('#mosaic').append($gridFragment);
     } // done setting up mosaic grid
+
+    /**
+     *
+     * Clear button
+     *
+     */
+    $('#button__clear').on('click', function () {
+        var confirmed = window.confirm('Are you sure you want to erase your mosiac?');
+        if (confirmed) { clearMosaicState(); }
+    });
 
     /**
      *

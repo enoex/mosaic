@@ -30,6 +30,11 @@ html, body {
 .palette-item:hover {
     border: 2px dashed #343434;
 }
+#button__clear {
+    font-size: 1.3em;
+    margin-top: 3em;
+    padding: 6px 20px;
+}
 
 #mosaic {
     bottom: 0;
